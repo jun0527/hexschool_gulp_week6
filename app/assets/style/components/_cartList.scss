@@ -1,0 +1,63 @@
+.cartList {
+  top: 82px;
+  width: 540px;
+  padding: 32px 15px 24px 32px;
+  @include mobile {
+    top: 62px;
+    padding: 20px 10px 28px 15px;
+  }
+  .title {
+    font-size: 32px;
+    @include mobile {
+      font-size: 24px;
+    }
+  }
+  .card {
+    padding: 4px 32px 24px 4px;
+    border-radius: 4px;
+    margin-right: 15px;
+    @include mobile {
+      padding: 4px 16px 16px 4px;
+      margin-right: 4px;
+    }
+  }
+  .closeBtn, .qtyBtn {
+    background: none;
+    border: none;
+    padding: 0;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  .picture {
+    width: 120px;
+    height: 120px;
+  }
+  .ticketType {
+    color: #373a3c;
+    margin-bottom: 14px;
+  }
+  .checkoutBtn {
+    background: $white;
+    margin-right: 15px;
+    padding: 10px 27px 10px 27px;
+    &:hover {
+      background: $primary;
+    }
+  }
+}
+//卷軸樣式
+//捲軸底色
+.scroll::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: $white;
+}
+//捲軸寬度
+.scroll::-webkit-scrollbar {
+  width: 2px;
+  background-color: black;
+}
+//捲軸本體顏色
+.scroll::-webkit-scrollbar-thumb {
+  background-color: $secondary;
+}

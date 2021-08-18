@@ -1,0 +1,21 @@
+.design {
+  .card {
+    padding-top: 80px;
+    padding-bottom: 52px;
+    @include pad {
+      padding-top: 44px;
+      padding-bottom: 44px;
+    }
+  }
+  a {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  h2 {
+    font-size: 36px;
+    @include pad {
+      font-size: 28px;
+    }
+  }
+}

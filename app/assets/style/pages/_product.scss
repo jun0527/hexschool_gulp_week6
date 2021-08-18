@@ -1,0 +1,79 @@
+.productInfo {
+  padding-top: 80px;
+  padding-bottom: 40px;
+  @include pad {
+    padding-top: 44px;
+    padding-bottom: 40px;
+  }
+  .pictureArea {
+    background-image: url(https://i.imgur.com/c58uaQf.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 256px;
+  }
+  .qtyArea {
+    padding-top: 88px;
+    border-right: 1px solid $gray;
+    @include mobile {
+      border-right: none;
+      padding-top: 40px;
+    }
+  }
+  .qtyBtn {
+    background: none;
+    border: none;
+    padding: 7.5px;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  .ticketTypeArea {
+    padding-top: 88px;
+    @include mobile {
+      padding-top: 40px;
+    }
+  }
+  .ticketTypeBtn {
+    display: block;
+    width: 65px;
+    text-align: center;
+    @include pad {
+      width: 50px;
+    }
+    @include mobile {
+      width: 65px;
+    }
+    &:hover {
+      border-bottom: 1px solid $secondary;
+    }
+    &.active {
+      border-bottom: 1px solid $secondary;
+    }
+  }
+  .btnArea {
+    margin-top: 42px;
+  }
+  .favorite {
+    @include mobile {
+      padding-right: 7px;
+    }
+  }
+  .addCart {
+    @include mobile {
+      padding-left: 8px;
+    }
+  }
+}
+.celebration {
+  .picture-1 {
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/exhibition-week6/max-van-den-oetelaar-IMYe9uYN27E-unsplash.jpg);
+    background-size: cover;
+    height: 400px;
+  }
+  .picture-2 {
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/exhibition-week6/ricardo-gomez-angel-j5gCOKZdm6I-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 559px;
+  }
+}
