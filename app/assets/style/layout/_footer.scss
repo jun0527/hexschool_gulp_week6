@@ -8,6 +8,9 @@
   align-items: flex-end;
   .subscription {
     width: 350px;
+    @include pad {
+      width: 100%;
+    }
     button {
       width: 136px;
     }
