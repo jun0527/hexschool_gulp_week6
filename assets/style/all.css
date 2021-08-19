@@ -15793,7 +15793,7 @@ header .banner button:nth-last-child(1) {
 }
 
 .menu ul {
-  height: 45px;
+  height: 55px;
   overflow-x: scroll;
   white-space: nowrap;
 }
@@ -15863,6 +15863,12 @@ header .banner button:nth-last-child(1) {
 
 .subscriptionArea .subscription {
   width: 350px;
+}
+
+@media (max-width: 991px) {
+  .subscriptionArea .subscription {
+    width: 100%;
+  }
 }
 
 .subscriptionArea .subscription button {
