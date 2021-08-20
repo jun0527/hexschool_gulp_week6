@@ -7,3 +7,8 @@
 .text-indent {
   text-indent: 2rem;
 }
+.btn-hover {
+  &:hover {
+    opacity: 0.5;
+  }
+}

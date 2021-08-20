@@ -7,11 +7,6 @@
       padding-bottom: 44px;
     }
   }
-  a {
-    &:hover {
-      opacity: 0.7;
-    }
-  }
   h2 {
     font-size: 36px;
     @include pad {

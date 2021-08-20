@@ -2,13 +2,10 @@
   padding-left: 15px;
   padding-right: 15px;
 }
-.leftColArea {
+.row {
   @include mobile {
-    padding-right: 7.4px;
-  }
-}
-.rightColArea {
-  @include mobile {
-    padding-left: 7.6px;
+    &:not(.g-0):not(.gx-0) {
+      --bs-gutter-x: 15px
+    }
   }
 }

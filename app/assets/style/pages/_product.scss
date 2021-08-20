@@ -20,12 +20,7 @@
     }
   }
   .qtyBtn {
-    background: none;
-    border: none;
     padding: 7.5px;
-    &:hover {
-      opacity: 0.5;
-    }
   }
   .ticketTypeArea {
     padding-top: 88px;
@@ -52,16 +47,6 @@
   }
   .btnArea {
     margin-top: 42px;
-  }
-  .favorite {
-    @include mobile {
-      padding-right: 7px;
-    }
-  }
-  .addCart {
-    @include mobile {
-      padding-left: 8px;
-    }
   }
 }
 .celebration {
