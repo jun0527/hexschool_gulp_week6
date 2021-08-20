@@ -15523,12 +15523,22 @@ fieldset:disabled .btn {
   text-indent: 2rem;
 }
 
+.btn-hover:hover {
+  opacity: 0.5;
+}
+
 body {
   font-family: 'Noto Sans TC', 'Roboto', sans-serif;
 }
 
 a {
   text-decoration: none;
+}
+
+a, button {
+  background: none;
+  border: none;
+  padding: 0;
 }
 
 img {
@@ -15572,14 +15582,9 @@ h6, .h6, .h6 {
 }
 
 @media (max-width: 767px) {
-  .leftColArea {
-    padding-right: 7.4px;
-  }
-}
-
-@media (max-width: 767px) {
-  .rightColArea {
-    padding-left: 7.6px;
+  .row:not(.g-0):not(.gx-0) {
+    --bs-gutter-x: 15px
+    ;
   }
 }
 
@@ -15611,69 +15616,60 @@ h6, .h6, .h6 {
      object-fit: cover;
 }
 
-.cartList {
+.cartListOffcanvas {
   top: 82px;
   width: 540px;
   padding: 32px 15px 24px 32px;
 }
 
 @media (max-width: 767px) {
-  .cartList {
+  .cartListOffcanvas {
+    width: 375px;
     top: 62px;
     padding: 20px 10px 28px 15px;
   }
 }
 
-.cartList .title {
+.cartListOffcanvas .title {
   font-size: 32px;
 }
 
 @media (max-width: 767px) {
-  .cartList .title {
+  .cartListOffcanvas .title {
     font-size: 24px;
   }
 }
 
-.cartList .card {
+.cartListOffcanvas .card {
   padding: 4px 32px 24px 4px;
   border-radius: 4px;
   margin-right: 15px;
 }
 
 @media (max-width: 767px) {
-  .cartList .card {
+  .cartListOffcanvas .card {
     padding: 4px 16px 16px 4px;
     margin-right: 4px;
   }
 }
 
-.cartList .closeBtn, .cartList .qtyBtn {
-  background: none;
-  border: none;
-  padding: 0;
-}
-
-.cartList .closeBtn:hover, .cartList .qtyBtn:hover {
-  opacity: 0.5;
-}
-
-.cartList .picture {
+.cartListOffcanvas .picture {
   width: 120px;
   height: 120px;
 }
 
-.cartList .ticketType {
+.cartListOffcanvas .ticketType {
   color: #373a3c;
   margin-bottom: 14px;
 }
 
-.cartList .checkoutBtn {
+.cartListOffcanvas .checkoutBtn {
   background: #fff;
   margin-right: 15px;
   padding: 10px 27px 10px 27px;
 }
 
-.cartList .checkoutBtn:hover {
+.cartListOffcanvas .checkoutBtn:hover {
   background: #630834;
 }
 
@@ -15690,6 +15686,46 @@ h6, .h6, .h6 {
 
 .scroll::-webkit-scrollbar-thumb {
   background-color: #E31277;
+}
+
+.orderProgress li {
+  position: relative;
+  color: #000;
+  text-align: center;
+  font-weight: 300;
+}
+
+@media (max-width: 991px) {
+  .orderProgress li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .orderProgress li {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.orderProgress li::before {
+  content: "";
+  position: absolute;
+  right: calc(50% - 4px);
+  top: -13px;
+  width: 8px;
+  height: 8px;
+  background: #E31277;
+  border-radius: 50%;
+}
+
+.orderProgress .currentStep {
+  font-weight: 500;
+}
+
+.orderProgress .noCompletedStep::before {
+  background: #fff;
+  border: 1px solid #E31277;
 }
 
 .topBar {
@@ -15722,10 +15758,6 @@ h6, .h6, .h6 {
 
 .topBar .sign a:hover {
   text-decoration: underline;
-}
-
-.topBar .cartBtn:hover {
-  opacity: 0.7;
 }
 
 .topBar .cartNum {
@@ -15875,46 +15907,6 @@ header .banner button:nth-last-child(1) {
   width: 136px;
 }
 
-.checkoutStep li {
-  position: relative;
-  color: #000;
-  text-align: center;
-  font-weight: 300;
-}
-
-@media (max-width: 991px) {
-  .checkoutStep li {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 767px) {
-  .checkoutStep li {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-.checkoutStep li::before {
-  content: "";
-  position: absolute;
-  right: calc(50% - 4px);
-  top: -13px;
-  width: 8px;
-  height: 8px;
-  background: #E31277;
-  border-radius: 50%;
-}
-
-.checkoutStep .currentStep {
-  font-weight: 500;
-}
-
-.checkoutStep .noCompletedStep::before {
-  background: #fff;
-  border: 1px solid #E31277;
-}
-
 .popular .card-body {
   padding: 40px 24px 40px 4px;
 }
@@ -16009,10 +16001,6 @@ header .banner button:nth-last-child(1) {
   }
 }
 
-.design a:hover {
-  opacity: 0.7;
-}
-
 .design h2, .design .h2 {
   font-size: 36px;
 }
@@ -16055,13 +16043,7 @@ header .banner button:nth-last-child(1) {
 }
 
 .productInfo .qtyBtn {
-  background: none;
-  border: none;
   padding: 7.5px;
-}
-
-.productInfo .qtyBtn:hover {
-  opacity: 0.5;
 }
 
 .productInfo .ticketTypeArea {
@@ -16104,18 +16086,6 @@ header .banner button:nth-last-child(1) {
   margin-top: 42px;
 }
 
-@media (max-width: 767px) {
-  .productInfo .favorite {
-    padding-right: 7px;
-  }
-}
-
-@media (max-width: 767px) {
-  .productInfo .addCart {
-    padding-left: 8px;
-  }
-}
-
 .celebration .picture-1 {
   background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/exhibition-week6/max-van-den-oetelaar-IMYe9uYN27E-unsplash.jpg);
   background-size: cover;
@@ -16152,16 +16122,6 @@ header .banner button:nth-last-child(1) {
 
 .checkout .pictureArea img {
   margin-top: -5%;
-}
-
-.checkout .qtyBtn, .checkout .deleteBtn {
-  background: none;
-  border: none;
-  padding: 0;
-}
-
-.checkout .qtyBtn:hover, .checkout .deleteBtn:hover {
-  opacity: 0.5;
 }
 
 @media (max-width: 991px) {
