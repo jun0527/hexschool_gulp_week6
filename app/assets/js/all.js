@@ -9,10 +9,7 @@ const checkoutStep = document.querySelector('.js-checkoutStep');
 const swiper = new Swiper(".mySwiper", {
   slidesPerView: 3,
   spaceBetween: 30,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+  loop: true,
   breakpoints: { 
     0: {
       slidesPerView: 1,
