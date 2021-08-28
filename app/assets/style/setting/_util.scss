@@ -1,14 +1,43 @@
-.fw-500 {
-  font-weight: 500;
-}
-.roboto {
-  font-family: 'Roboto', sans-serif;
-}
-.text-indent {
-  text-indent: 2rem;
-}
-.btn-hover {
-  &:hover {
-    opacity: 0.5;
-  }
-}
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "opacity": (
+    property: opacity,
+    class: opacity,
+    state: hover,
+    values: (
+      0: 0,
+      25: .25,
+      50: .5,
+      75: .75,
+      100: 1,
+      )
+    ),
+    "indent": (
+    property: text-indent,
+    class: indent,
+    values: (
+      2: 2rem,
+      )
+    ),
+    "font-weight": map-merge(
+      map-get($utilities, "font-weight"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "font-weight"), "values"),
+          (500: 500),
+        ),
+      ),
+    ),
+    "font-family": map-merge(
+      map-get($utilities, "font-family"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "font-family"), "values"),
+          (roboto: 'Roboto'),
+        ),
+      ),
+    ),
+  )
+);

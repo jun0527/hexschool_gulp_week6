@@ -2,10 +2,17 @@
   padding-left: 15px;
   padding-right: 15px;
 }
+.container-0 {
+  padding-left: 0;
+  padding-right: 0;
+}
 .row {
-  @include mobile {
+  &:not(.g-0):not(.gx-0) {
+    --bs-gutter-x: 15px;
+  }
+  @include media-breakpoint-up(md) {
     &:not(.g-0):not(.gx-0) {
-      --bs-gutter-x: 15px
+      --bs-gutter-x: 30px;
     }
   }
 }

@@ -1,16 +1,16 @@
 .design {
   .card {
-    padding-top: 80px;
-    padding-bottom: 52px;
-    @include pad {
-      padding-top: 44px;
-      padding-bottom: 44px;
+    padding-top: 44px;
+    padding-bottom: 44px;
+    @include media-breakpoint-up(lg) {
+      padding-top: 80px;
+      padding-bottom: 52px;
     }
   }
   h2 {
-    font-size: 36px;
-    @include pad {
-      font-size: 28px;
+    font-size: 28px;
+    @include media-breakpoint-up(lg) {
+      font-size: 36px;
     }
   }
 }

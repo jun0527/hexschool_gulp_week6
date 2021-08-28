@@ -1,37 +1,37 @@
 .popular {
   .card-body {
-    padding: 40px 24px 40px 4px;
-    @include pc-lg {
-      padding: 12px 24px 12px 4px;
-    }
-    @include pad {
+    padding: 8px 0 24px 0;
+    @include media-breakpoint-up(md) {
       padding: 10px 12px 10px 0;
     }
-    @include mobile {
-      padding: 8px 0 24px 0;
+    @include media-breakpoint-up(lg) {
+      padding: 12px 24px 12px 4px;
+    }
+    @include media-breakpoint-up(xl) {
+      padding: 40px 24px 40px 4px;
     }
   }
   .content {
-    width: 76%;
-    @include pad {
-      width: 100%;
+    width: 100%;
+    @include media-breakpoint-up(lg) {
+      width: 76%;
     }
   }
   .describe {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
-    @include pad {
+    @include media-breakpoint-up(md) {
       font-size: 14px;
     }
-    @include mobile {
-      font-size: 16px;
+    @include media-breakpoint-up(lg) {
+      font-size: 20px;
     }
   }
   a {
     display: block;
-    margin-bottom: 10px;
-    @include mobile {
-      margin-bottom: 0;
+    margin-bottom: 0;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 10px;
     }
     img {
       display: block;
@@ -41,9 +41,9 @@
 .liveReview {
   background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/exhibition-week6/people2.png);
   .describe {
-    font-size: 20px;
-    @include mobile {
-      font-size: 16px;
+    font-size: 16px;
+    @include media-breakpoint-up(md) {
+      font-size: 20px;
     }
   }
   button {

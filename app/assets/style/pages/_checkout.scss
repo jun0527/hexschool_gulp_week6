@@ -1,10 +1,10 @@
 .checkout {
-  min-height: calc(100vh - 82px - 62px - 64px);
-  @include pad {
-    min-height: calc(100vh - 82px - 58.8px - 64px);
+  min-height: calc(100vh - 62px - 50.8px - 60px);
+  @include media-breakpoint-up(md) {
+    min-height: calc(100vh - 82px - 62px - 64px);
   }
-  @include mobile {
-    min-height: calc(100vh - 62px - 50.8px - 60px);
+  @include media-breakpoint-up(lg) {
+    min-height: calc(100vh - 82px - 62px - 64px);
   }
   .pictureArea {
     height: 84px;
@@ -14,17 +14,19 @@
     }
   }
   form {
-    @include pad {
-      margin-bottom: 54px;
+    margin-bottom: 54px;
+    @include media-breakpoint-up(lg) {
+    margin-bottom: 0;
     }
   }
 }
 .orderComplete {
-  padding-top: 78px;
-  padding-bottom: 83px;
-  min-height: calc(100vh - 82px - 64px);
-  @include mobile {
-    min-height: calc(100vh - 62px - 60px);
+  padding-top: 22px;
+  @include media-breakpoint-up(md) {
+    padding-top: 42px;
+  }
+  @include media-breakpoint-up(lg) {
+    padding-top: 82px;
   }
   .icon {
     font-size: 48px;
